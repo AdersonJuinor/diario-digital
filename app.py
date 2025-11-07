@@ -8,7 +8,6 @@ from datetime import datetime
 app = Flask(__name__)
 
 
-
 # Rota para a página inicial
 @app.route('/')
 def index():
@@ -152,11 +151,6 @@ def delete_album_photo(photo_id):
 # Execução da Aplicação
 # ==========================================================
 
-# Verifica se o ambiente de execução é de produção ou desenvolvimento
 if __name__ == '__main__':
-    # Se estivermos rodando diretamente no terminal, é ambiente de DEV.
+    # O Vercel usa o Gunicorn. Esta parte é só para você rodar o Flask no seu PC.
     app.run(debug=True)
-else:
-    # Se NÃO estivermos rodando diretamente, significa que o Gunicorn está nos chamando.
-    # Esta linha é opcional, mas garante que o app use configurações de produção (se tivéssemos mais):
-    app.config.from_object('config.ProductionConfig')
