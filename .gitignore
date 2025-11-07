@@ -9,3 +9,5 @@ instance/
 # macOS/Windows files
 .DS_Store
 Thumbs.db
+# api
+api_requests/
