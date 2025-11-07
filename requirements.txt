@@ -1,2 +1,5 @@
 Flask
-gunicorn
+Jinja2
+itsdangerous
+Werkzeug
+python-dateutil # Para o datetime.date
