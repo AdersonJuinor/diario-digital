@@ -44,12 +44,12 @@ CORS(app)
 @app.route('/api/vlog-posts', methods=['GET'])
 def get_vlog_posts():
     """Retorna todos os posts do vlog em ordem cronológica inversa."""
-    
-    # Consulta o banco de dados, ordena pelo mais recente
-    posts = PostVlog.query.order_by(PostVlog.data_do_momento.desc()).all()
-    
-    # Converte a lista de objetos Python em JSON para o JavaScript
-    return jsonify([post.to_json() for post in posts])
+    with app.app_context():
+        # Consulta o banco de dados, ordena pelo mais recente
+        posts = PostVlog.query.order_by(PostVlog.data_do_momento.desc()).all()
+        
+        # Converte a lista de objetos Python em JSON para o JavaScript
+        return jsonify([post.to_json() for post in posts])
 
 
 # Rota POST: Adicionar um novo post (você usará esta rota para salvar novas memórias)
@@ -96,9 +96,10 @@ def delete_vlog_post(post_id):
 
 @app.route('/api/album-photos', methods=['GET'])
 def get_album_photos():
-    # Simples: Lista todas as fotos
-    photos = AlbumPhoto.query.all()
-    return jsonify([photo.to_dict() for photo in photos])
+    with app.app_context():
+        # Simples: Lista todas as fotos
+        photos = AlbumPhoto.query.all()
+        return jsonify([photo.to_dict() for photo in photos])
 
 @app.route('/api/album-photos', methods=['POST'])
 def create_album_photo():
