@@ -8,8 +8,6 @@ from datetime import datetime
 app = Flask(__name__)
 
 
-# Data de Início do Relacionamento (Para o contador de dias - Front-end)
-DATA_INICIO_NAMORO = date(2025, 8, 28)
 
 # Rota para a página inicial
 @app.route('/')
