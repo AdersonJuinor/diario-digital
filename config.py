@@ -1,0 +1,1 @@
+python\nimport os\n\nclass Config:\n DEBUG = False\n TESTING = False\n\nclass ProductionConfig(Config):\n pass\n

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossos Momentos: Álbuns de Fotos</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> 
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> 
+</head>
+<body>
+    <header class="hero timeline-hero"> 
+        <div class="hero-content">
+            <a href="{{ url_for('index')}}" class="btn btn-home-nav">Voltar à Home</a>
+            <h1 class="title">Nossos Momentos ✨</h1>
+            <p class="subtitle-hero">Uma coleção de sorrisos, viagens e tudo que vivemos.</p>
+        </div>
+    </header>
+
+    <main class="album-main-container container">
+    <section class="section">
+        <h2>Nossas Lembranças</h2>
+        
+        <div id="photo-grid" class="photo-grid-gallery">
+            </div>
+        
+    </section>
+</main>
+
+<div id="lightbox" class="lightbox">
+    <button class="lightbox-close" onclick="fecharLightbox()">&times;</button>
+    
+    <div class="lightbox-content">
+        <img id="lightbox-img" class="lightbox-img" src="" alt="Foto Ampliada">
+        <div class="lightbox-caption">
+            <h3 id="lightbox-title"></h3>
+            <p id="lightbox-desc"></p>
+            <span id="lightbox-counter" class="lightbox-counter"></span>
+        </div>
+    </div>
+    
+</div>
+
+<script src="{{ url_for('static', filename='js/script_albuns.js') }}"></script>
+    
+    </body>
+</html>

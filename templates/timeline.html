@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa História: O Caminho do Amor</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> 
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header class="hero timeline-hero">
+        <div class="hero-content">
+            <a href="{{ url_for('index')}}" class="btn btn-home-nav">Voltar à Home</a>
+            <h1 class="title">Nosso Caminho do Amor ✨</h1>
+            <div id="countdown" class="countdown"></div>
+        </div>
+    </header>
+
+    <main class="timeline-main-container">
+        <section class="section vlog-section">
+            <h2>Nossas Memórias</h2>
+            <p class="vlog-intro">Desde o dia 1 até hoje. O caminho só melhora ao seu lado.</p>
+            
+            <div id="linha-do-tempo" class="timeline-path"> 
+                <p>Carregando...</p>
+            </div>
+        </section>
+    </main>
+    <script src="{{ url_for('static', filename='script_timeline.js') }}"></script>
+</body>
+</html>
+    <script src="{{ url_for('static', filename='js/script_timeline.js') }}"></script>
+</body>
+</html>

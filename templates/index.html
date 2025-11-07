@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Minha Princesa ❤️</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body class="main-page">
+
+    <div id="particles-js" class="background-animation"></div>
+
+    <main class="main-page-content">
+        <section class="hero-main-page as-letter">
+            <div class="letter-background-image"></div>
+            <h1 class="main-title typewriter" data-text="Para a Minha Mais Bela Princesa, Samantha!"></h1>
+            <p class="main-subtitle">
+                <i class="fa-solid fa-envelope-open-text"></i>
+                Você é a melodia mais linda da minha vida.
+            </p>
+
+            
+            <div class="photo-grid">
+                <img src="{{ url_for('static', filename='img/home.jpg') }}" alt="Foto Fofa 1" class="main-photo">
+            </div>
+
+            <p class="main-text">
+                Você é a luz que ilumina minha vida, o sorriso que transforma meus dias e o amor que dá sentido a tudo o que sou.<br><br>
+                Em você encontrei mais do que uma namorada — encontrei minha parceira de alma, minha melhor amiga, meu porto seguro, meu tudo.<br><br>
+                Cada momento ao seu lado é uma lembrança doce, um pedacinho de eternidade que guardo no coração. Quero construir um futuro incrível com você, cheio de sonhos, conquistas e amor verdadeiro.<br><br>
+                Minha princesa linda, eu te amo mais do que as palavras conseguem dizer e mais do que o coração consegue explicar. Que a vida siga nos unindo, sempre de mãos dadas, sempre nós dois — para sempre juntos, para sempre um do outro. ❤️
+            </p>
+
+            <div class="main-buttons">
+                <a href="{{ url_for('timeline')}}" class="btn btn-primary">Nossa História (Linha do Tempo)</a>
+                <a href="{{ url_for('albuns')}}" class="btn btn-secondary">Nossos Momentos (Álbuns)</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/script_home.js') }}"></script>
+</body>
+</html>
