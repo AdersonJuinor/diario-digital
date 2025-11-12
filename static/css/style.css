@@ -609,7 +609,7 @@ footer { text-align: center; padding: 20px; border-top: 1px solid #eee; color: #
     }
 
     .lightbox-img {
-        max-height: 55vh;
+        max-height: 54vh;
     }
     .lightbox-desc {
         font-size: 0.9em;
