@@ -602,14 +602,14 @@ footer { text-align: center; padding: 20px; border-top: 1px solid #eee; color: #
     /* --- ÁLBUNS (albuns.html) --- */
     .photo-grid-gallery {
         grid-template-columns: repeat(2, 1fr); /* 2 colunas */
-        gap: 15px;
+        gap: 20px;
     }
     .photo-card {
-        height: 250px;
+        height: 280px;
     }
 
     .lightbox-img {
-        max-height: 70vh;
+        max-height: 55vh;
     }
     .lightbox-desc {
         font-size: 0.9em;
